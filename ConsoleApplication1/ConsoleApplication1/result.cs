@@ -24,7 +24,7 @@ namespace ConsoleApplication1
         public static myResult operator ++(myResult res)
         {
             res.num++;
-            if (res.num >= 7)
+            if (res.num > 6)
             {
                 res.num = 0;
             }
@@ -34,9 +34,9 @@ namespace ConsoleApplication1
         public static myResult operator --(myResult res)
         {
             res.num--;
-            if (res.num <= 0)
+            if (res.num < 0)
             {
-                res.num = 7;
+                res.num = 6;
             }
 
             return res;

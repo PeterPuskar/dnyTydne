@@ -24,7 +24,8 @@ namespace ConsoleApplication1
             Conversion con = new Conversion(day);
             if (con.result.status)
             {
-                Console.WriteLine("(Prvy den je nedela) Den: {0}", Conversion.week[con.result.num]);
+                Console.WriteLine("(Prvy den je nedela) (Array) Den: {0}", Conversion.week[con.result.num]);
+                Console.WriteLine("(Prvy den je nedela) (Enum) Den: {0}", (Week1)con.result.num);
             }
             
         }
@@ -37,7 +38,10 @@ namespace ConsoleApplication1
                 {
                     //ak je pondelok prvy musime posunut cislo o jedno vpred, aby sme nezacinali s nedelou...
                     con.result++;
-                    Console.WriteLine("(Prvy den je pondelok) Den: {0}", Conversion.week[con.result.num]);
+
+                   // string nieco = Week1(0);
+                    Console.WriteLine("(Prvy den je pondelok) (Array) Den: {0}", Conversion.week[con.result.num]);
+                    Console.WriteLine("(Prvy den je pondelok) (Enum) Den: {0}", (Week1)con.result.num);
                 }
                 else
                 {
@@ -57,7 +61,8 @@ namespace ConsoleApplication1
             //Conversion con = new Conversion(day);
             if (con.result.status)
             {
-                Console.WriteLine("(Prvy den je nedela) Den: {0}", Conversion.week[con.result.num]);
+                Console.WriteLine("S objektom.... (Prvy den je nedela) (array) Den: {0}", Conversion.week[con.result.num]);
+                Console.WriteLine("S objektom....(Prvy den je pondelok) (Enum) Den: {0}", (Week1)con.result.num);
             }
            
         }
@@ -69,7 +74,8 @@ namespace ConsoleApplication1
                 if (mondayFirst)
                 {
                     con.result++;
-                    Console.WriteLine("(Prvy den je pondelok) Den: {0}", Conversion.week[con.result.num]);
+                    Console.WriteLine(" S objektom.... (Prvy den je pondelok) (Array) Den: {0}", Conversion.week[con.result.num]);
+                    Console.WriteLine(" S objektom....(Prvy den je pondelok) (Enum) Den: {0}", (Week1)con.result.num);
                 }else
                 {
                     dnyTydne.getWeekDay(con);

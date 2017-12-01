@@ -17,6 +17,8 @@ namespace ConsoleApplication1
 
         public static string[] week = new string[] { "Nedela","Pondelok","Utorok","Streda","Stvrtok","Piatok","Sobota" };
 
+        public enum Week1 {Nedela, Pondelok, Utorok,Streda,Stvrtok, Piatok, Sobota};
+
         
 
         /*public Conversion()
@@ -37,7 +39,7 @@ namespace ConsoleApplication1
             if (this.result.num < _MIN || this.result.num > _MAX)
             {
                 this.result.status = false;
-                throw new Exception("nie je v rozsahu 0...7");
+                throw new Exception("nie je v rozsahu 0...6");
                 //return;
             }
 
