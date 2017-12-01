@@ -22,6 +22,7 @@ namespace ConsoleApplication1
         public static void getWeekDay(string day)
         {
             Conversion con = new Conversion(day);
+
             if (con.result.status)
             {
                 Console.WriteLine("(Prvy den je nedela) (Array) Den: {0}", Conversion.week[con.result.num]);
@@ -32,6 +33,7 @@ namespace ConsoleApplication1
         public static void getWeekDay(string day, bool mondayFirst)
         {
             Conversion con = new Conversion(day);
+
             if (con.result.status)
             {
                 if (mondayFirst)
@@ -50,6 +52,8 @@ namespace ConsoleApplication1
                     //tak neviem ci je to tako spravne pochopene....
 
                     dnyTydne.getWeekDay(day);
+                    //da sa to uplne odlahcit a nemusime to instanciovat dvakrat....
+                    dnyTydne.getWeekDay(con);
                 }
                
             }
@@ -76,7 +80,8 @@ namespace ConsoleApplication1
                     con.result++;
                     Console.WriteLine(" S objektom.... (Prvy den je pondelok) (Array) Den: {0}", Conversion.week[con.result.num]);
                     Console.WriteLine(" S objektom....(Prvy den je pondelok) (Enum) Den: {0}", (Week1)con.result.num);
-                }else
+                }
+                else
                 {
                     dnyTydne.getWeekDay(con);
                 }
